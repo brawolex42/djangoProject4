@@ -100,7 +100,7 @@
 # )
 # print("CREATE:", task, st1, st2, sep="\n")
 #
-# # READ
+# 
 # print("\nREAD — Tasks with NEW:")
 # for t in Task.objects.filter(status=Status.NEW):
 #     print(t.id, t.title, t.status, t.deadline)
@@ -130,7 +130,7 @@ from tasks.models import Task, SubTask, Status
 
 now = timezone.now()
 
-# CREATE
+
 task, _ = Task.objects.update_or_create(
     title="Prepare presentation",
     defaults={
@@ -159,7 +159,7 @@ st2, _ = SubTask.objects.update_or_create(
 )
 print("CREATE:", task, st1, st2, sep="\n")
 
-# READ
+
 print("\nREAD — Tasks with NEW:")
 for t in Task.objects.filter(status=Status.NEW):
     print(t.id, t.title, t.status, t.deadline)
@@ -168,7 +168,7 @@ print("\nREAD — SubTasks DONE & overdue:")
 for s in SubTask.objects.filter(status=Status.DONE, deadline__lt=now):
     print(s.id, s.title, s.status, s.deadline)
 
-# UPDATE
+
 task = Task.objects.get(title="Prepare presentation")
 task.status = Status.IN_PROGRESS
 task.save()
@@ -180,6 +180,6 @@ st2.description = "Create and format presentation slides"
 st2.save()
 print("\nUPDATE:", task, st1.deadline, st2.description)
 
-# DELETE
+
 Task.objects.filter(title="Prepare presentation").delete()
 print("\nDELETE — Task and related SubTasks removed.")
