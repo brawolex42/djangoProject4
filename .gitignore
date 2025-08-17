@@ -39,3 +39,13 @@ CON
 identifier.sqlite
 # Secrets
 .env*
+
+NUL
+PRN
+AUX
+CON
+.env*
+.venv/
+.idea/
+*.sqlite*
+identifier.sqlite
