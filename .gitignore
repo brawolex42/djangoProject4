@@ -59,3 +59,13 @@ CON
 .idea/
 *.sqlite*
 identifier.sqlite
+
+NUL
+PRN
+AUX
+CON
+.env*
+.venv/
+.idea/
+*.sqlite*
+identifier.sqlite
