@@ -1,8 +1,41 @@
-### Example user template template
-### Example user template
+# Python / Django
+__pycache__/
+*.py[cod]
+*.log
 
-# IntelliJ project files
-.idea
+# DB
+*.sqlite
+*.sqlite3
+identifier.sqlite
+
+# Venv
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+
+# IDE
+.idea/
 *.iml
-out
-gen
+
+# Static/media (если собираешь)
+staticfiles/
+media/
+
+# Windows device names
+NUL
+PRN
+AUX
+CON
+# IDE
+.idea/
+# Venv
+.venv/
+# DB
+*.sqlite*
+identifier.sqlite
+# Secrets
+.env*
