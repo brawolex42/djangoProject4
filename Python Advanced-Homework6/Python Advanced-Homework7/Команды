@@ -1,0 +1,12 @@
+python -m venv .venv
+# PowerShell:
+. .venv/Scripts/Activate.ps1
+# или Git Bash:
+# source .venv/Scripts/activate
+
+pip install django django-environ pymysql
+django-admin startproject hw7_project .
+python manage.py startapp greet
+python manage.py migrate
+python manage.py runserver
+# Открой http://127.0.0.1:8000/ и проверь "Hello, Aleksandr"
